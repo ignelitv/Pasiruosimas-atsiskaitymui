@@ -1,15 +1,20 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagrindinis puslapis</title>
+    <title>Notes App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Registracijos puslapis</h1>
-    <form action="/registruoti_vartotoja" method="post">
-        <input type="text" name="vartotojas" placeholder="Vartotojo vardas">
-        <input type="submit" value="Registruoti">
-    </form>
+    <div class="container mt-5">
+        <h1 class="mb-3">Notes</h1>
+        <ul class="list-group">
+            {% for note in notes %}
+            <li class="list-group-item">{{ note.content }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
