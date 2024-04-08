@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ vartotojas }} užrašai</title>
+</head>
+<body>
+    <h1>{{ vartotojas }} užrašai</h1>
+    <form action="/vartotojai/{{ vartotojas }}" method="post">
+        <input type="text" name="tekstas" placeholder="Įveskite tekstą">
+        <input type="submit" value="Siųsti">
+    </form>
+    <p>{{ uzrasas }}</p>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartotojas {{ vardas }}</title>
+</head>
+<body>
+    <h1>Vartotojas {{ vardas }}</h1>
+    <form action="/vartotojai/{{ vardas }}" method="post">
+        <textarea name="tekstas" rows="4" cols="50">{{ uzrasai }}</textarea><br>
+        <input type="submit" value="Išsaugoti">
+    </form>
+</body>
+</html>
+
+</html>
