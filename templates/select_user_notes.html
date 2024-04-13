@@ -1,0 +1,26 @@
+<!-- select_user_notes.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select User Notes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Select User Notes</h1>
+        <form action="/select_user_notes" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="selected_username">Select user:</label>
+                <select name="selected_username" id="selected_username" class="form-control">
+                    {% for user in all_users %}
+                    <option value="{{ user[0] }}">{{ user[0] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Select</button>
+        </form>
+    </div>
+</body>
+</html>
