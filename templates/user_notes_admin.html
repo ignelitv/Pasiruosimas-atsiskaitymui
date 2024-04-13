@@ -6,16 +6,11 @@
     <title>User Notes</title>
 </head>
 <body>
-    <h1>User Notes</h1>
+    <h1>User Notes for {{ username }}</h1>
     <ul>
         {% for note in notes %}
             <li>{{ note }}</li>
         {% endfor %}
     </ul>
-    <form action="/add_note" method="post">
-        <label for="new_note">Add New Note:</label>
-        <input type="text" id="new_note" name="new_note">
-        <input type="submit" value="Add">
-    </form>
 </body>
 </html>

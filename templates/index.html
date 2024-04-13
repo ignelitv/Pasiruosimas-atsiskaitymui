@@ -1,20 +1,26 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Login/Register</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-3">Notes</h1>
-        <ul class="list-group">
-            {% for note in notes %}
-            <li class="list-group-item">{{ note.content }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h1>Login/Register</h1>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <form action="/register" method="post">
+        <label for="new_username">New Username:</label>
+        <input type="text" id="new_username" name="new_username"><br>
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" name="new_password"><br>
+        <input type="submit" value="Register">
+    </form>
 </body>
 </html>
